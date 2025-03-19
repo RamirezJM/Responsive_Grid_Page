@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+h1 {
+  color: #0F0F0F; 
+  letter-spacing: 0.04em;
+  font-family: "Source Code Pro", sans-serif;
+  margin: 1em 0 1em 5%;
+}
+
+h2 {
+  font-size: 0.88rem;
+  color: #5D0E50;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: .4em 0;
+  letter-spacing: 0.03em;
+  color: #111111;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  font-size: .85rem;
+  color: #7c7c7c;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  filter: brightness(0.9);
+}
+
+a:focus {
+  outline: 3px solid #5a5a5a;
+  box-shadow: 0 0 0 3px rgba(135,18,113,0.5); 
+  transition: outline 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+article {
+  border-radius: 0.2em;
+  background-color: #e5e5e5;
+  height: 100%;
+}
+
+.article-header {
+  padding: 1em;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  border-top-left-radius: .2em;
+  border-top-right-radius: .2em;
+}
+
+
+footer{
+  margin-block: 1rem;
+  text-align: center;
+}
+
+@media (min-width:600px){
+  main{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .technology{
+    grid-column: span 2;
+    grid-row: 1 / 2;
+  }
+  .environment{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .nasa{
+    grid-column: 2 / 3;
+    grid-row: span 2;
+  }
+  .health{
+    grid-column: span 2;
+  }
+}
+
+@media (min-width:850px){
+  main{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .technology{
+    grid-column: span 2;
+    grid-row: 1 / 2;
+  }
+  .environment{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  .nasa{
+    grid-column: 4 / 5;
+    grid-row: span 2;
+  }
+  .physics{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}
